@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solivage Travels - Luxury Chauffeur & Travel Solutions</title>
+    <meta name="description" content="Solivage Travels offers luxury chauffeur, airport transfers, and bespoke travel solutions. Experience world-class service, premium vehicles, and seamless journeys.">
+    <meta name="keywords" content="luxury travel, chauffeur, airport transfer, Nairobi, Kenya, premium vehicles, Solivage, Mercedes, Tesla, BYD, executive travel, bespoke tours, eco-friendly, sustainable travel, VIP, corporate travel, family trips, adventure, safari, Diani, Maasai Mara, Lamu, business travel">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Solivage Travels - Luxury Chauffeur & Travel Solutions">
+    <meta property="og:description" content="Experience world-class service, premium vehicles, and seamless journeys with Solivage Travels.">
+    <meta property="og:image" content="back3-optimized.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://solivagetravels.com/">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Solivage Travels - Luxury Chauffeur & Travel Solutions">
+    <meta name="twitter:description" content="Experience world-class service, premium vehicles, and seamless journeys with Solivage Travels.">
+    <meta name="twitter:image" content="back3-optimized.webp">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00fff7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('service-worker.js');
+                });
+            }
+        </script>
+        <header class="hero-header" style="background: url('back3-optimized.webp'), url('back3.JPEG') no-repeat center center/cover; min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;">
+        <nav class="main-nav" aria-label="Main Navigation" style="width: 100%; display: flex; justify-content: flex-end; padding: 30px 60px 0 0; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.2);">
+            <a href="#services" class="nav-link" aria-label="Services">Services</a>
+            <a href="#vehicles" class="nav-link" aria-label="Vehicles">Vehicles</a>
+            <a href="#testimonials" class="nav-link" aria-label="Testimonials">Testimonials</a>
+            <a href="#about" class="nav-link" aria-label="About">About</a>
+            <a href="#contact" class="nav-link" aria-label="Contact">Contact</a>
+        </nav>
+        <div class="hero-content" style="text-align: center; color: #fff; margin-top: 80px;">
+            <h1 style="font-size: 3.5em; font-weight: 700; letter-spacing: 2px; text-shadow: 0 4px 24px #000;">Solivage Travels</h1>
+            <h2 style="font-size: 2em; font-weight: 400; margin: 20px 0 10px; text-shadow: 0 2px 12px #000;">Luxury Chauffeur & Travel Solutions</h2>
+            <p style="font-size: 1.3em; max-width: 600px; margin: 0 auto; text-shadow: 0 2px 8px #000;">Your journey, redefined. Experience the pinnacle of comfort, safety, and style with our world-class fleet and professional chauffeurs. Ready when you are, wherever you go.</p>
+            <a href="#contact" class="cta-button" style="margin-top: 30px; font-size: 1.2em;">Book Your Journey</a>
+        </div>
+        <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%); z-index: 0;"></div>
+    </header>
+
+    <!-- Cyberpunk Animated Background (Vanta.js NET) -->
+    <div id="cyberpunk-bg" style="position:fixed; top:60vh; left:0; width:100vw; height:100vh; z-index:-1;"></div>
+    <main>
+        <!-- Vehicle Selection & Booking Section -->
+        <section id="choose-vehicle" class="section choose-vehicle-section">
+            <h2 class="section-title">Choose Your Vehicle & Book</h2>
+            <div class="grid-container">
+                <div class="grid-item" data-vehicle="electric">
+                    <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=600&q=80" alt="Electric Car (BYD, Tesla, etc.)">
+                    <h3>Electric Car</h3>
+                    <p></p>
+                    <button class="cta-button select-vehicle" data-vehicle="Electric Car">Select</button>
+                </div>
+                <div class="grid-item" data-vehicle="vclass">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Mercedes V Class">
+                    <h3>Mercedes V Class</h3>
+                    <p>1-6 Passengers<br>Spacious, versatile, and perfect for groups or families.</p>
+                    <button class="cta-button select-vehicle" data-vehicle="Mercedes V Class">Select</button>
+                </div>
+            </div>
+            <div id="bookingFormContainer" style="display:none; margin-top:40px;">
+                <form id="vehicleBookingForm" aria-label="Vehicle Booking Form" autocomplete="on" style="max-width: 500px; margin: 0 auto; background: rgba(0,0,0,0.85); padding: 30px; border-radius: 12px;">
+                    <h3 id="selectedVehicleTitle" style="color:#DEB887; text-align:center; margin-bottom:20px;"></h3>
+                    <div style="margin-bottom: 18px;">
+                        <label for="bookingName" style="display: block; color: #fff; margin-bottom: 6px;">Name</label>
+                        <input type="text" id="bookingName" name="bookingName" required aria-required="true" aria-label="Name" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                    </div>
+                    <div style="margin-bottom: 18px;">
+                        <label for="bookingEmail" style="display: block; color: #fff; margin-bottom: 6px;">Email</label>
+                        <input type="email" id="bookingEmail" name="bookingEmail" required aria-required="true" aria-label="Email" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                    </div>
+                    <div style="margin-bottom: 18px;">
+                        <label for="bookingDate" style="display: block; color: #fff; margin-bottom: 6px;">Date & Time</label>
+                        <input type="datetime-local" id="bookingDate" name="bookingDate" required aria-required="true" aria-label="Date and Time" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                    </div>
+                    <div style="margin-bottom: 18px;">
+                        <label for="pickupLocation" style="display: block; color: #fff; margin-bottom: 6px;">Pickup Location</label>
+                        <input type="text" id="pickupLocation" name="pickupLocation" required aria-required="true" aria-label="Pickup Location" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                    </div>
+                    <div style="margin-bottom: 18px;">
+                        <label for="dropoffLocation" style="display: block; color: #fff; margin-bottom: 6px;">Dropoff Location</label>
+                        <input type="text" id="dropoffLocation" name="dropoffLocation" required aria-required="true" aria-label="Dropoff Location" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                    </div>
+                    <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1em;">Book Now</button>
+                </form>
+                <div id="bookingSuccessAnimation" style="display:none; text-align:center; margin-top:30px;">
+                    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_0yfsb3a1.json" background="transparent" speed="1" style="width: 180px; height: 180px; margin:0 auto;" loop autoplay></lottie-player>
+                    <h3 style="color:#DEB887; margin-top:20px;">Booking Successful!</h3>
+                    <p style="color:#fff;">Thank you for booking with Solivage Travels.<br>We look forward to serving you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section services-section">
+            <h2 class="section-title">Our Services</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <i class="fas fa-car-side fa-3x"></i>
+                    <h3>On-Demand Chauffeur</h3>
+                    <p>Book a professional chauffeur at your convenience for city transfers, business meetings, or special events. Instant bookings, guaranteed availability, and luxury vehicles.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-plane-arrival fa-3x"></i>
+                    <h3>Airport Transfers</h3>
+                    <p>Start and end your journey with first-class airport transfers. Meet & Greet inside the terminal, flight tracking, and 45 minutes free wait time. Fixed fares, no surge pricing.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-calendar-check fa-3x"></i>
+                    <h3>Pre-Book Chauffeur</h3>
+                    <p>Plan ahead for events, business meetings, or seamless city transfers. Guaranteed punctuality, tailored to your schedule, and ideal for corporate or VIP travel.</p>
+                </div>
+                <div class="grid-item">
+                    <i class="fas fa-clock fa-3x"></i>
+                    <h3>By the Hour</h3>
+                    <p>Hire a chauffeur by the hour for multi-stop journeys, corporate travel, or personal errands. Enjoy ultimate flexibility and a premium fleet.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Vehicles section is now merged into the booking section above -->
+
+        <section id="testimonials" class="section testimonials-section">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <blockquote>“Solivage Travels made my airport transfer from JKIA to Westlands so smooth and comfortable. The electric car was spotless and the driver was very professional. As a Nairobi resident, I highly recommend them!”</blockquote>
+                    <cite>– Wanjiku M., Nairobi</cite>
+                </div>
+                <div class="grid-item">
+                    <blockquote>“I booked a Mercedes V Class for my family trip to Serena Hotel. The service was top-notch, the car was spacious, and the kids loved it. Will definitely use Solivage again.”</blockquote>
+                    <cite>– Brian Otieno, Karen</cite>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <h2 class="section-title">About Solivage Travels</h2>
+            <button id="aboutToggle" class="cta-button" style="margin: 0 auto 24px auto; display: block; font-size: 1em;">Learn More About Us</button>
+            <div id="aboutDetails" style="max-width: 800px; margin: 0 auto; text-align: left; font-size: 1.1em; display: none; background: rgba(24,24,42,0.85); color: #fff; border-radius: 12px; padding: 28px 24px; box-shadow: 0 2px 18px rgba(0,255,247,0.08);">
+                <h3 style="color:#00fff7; font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;">Solivage Travels<br><span style='font-size:1.1em;color:#ff00ea;'>Embark on Journeys That Nourish the Soul</span></h3>
+                <h4 style="margin-top:18px; color:#DEB887;">Who We Are</h4>
+                <p>Founded in the heart of Nairobi in 2020, Solivage Travels is a boutique Kenyan travel company redefining adventure with a touch of soulful serenity. We believe travel isn't just about destinations—it's about the stories you carry home, the connections you forge, and the quiet moments that recharge your spirit. As proud stewards of Kenya's wild beauty, we craft bespoke experiences that blend adrenaline, culture, and conservation, ensuring every trip leaves the world a little better than we found it.</p>
+                <h4 style="margin-top:18px; color:#DEB887;">Our Mission</h4>
+                <p>At Solivage, we're on a mission to make meaningful travel accessible to all, whether you're a solo wanderer chasing sunrises over the Maasai Mara, a family seeking hidden beaches on Diani's shores, or a corporate group bonding on a Serengeti safari. We prioritize sustainable practices: partnering with local communities, supporting eco-lodges, and offsetting carbon footprints so your voyage honors the land that hosts it.</p>
+                <h4 style="margin-top:18px; color:#DEB887;">What Sets Us Apart</h4>
+                <ul style="margin-bottom:18px;">
+                    <li><strong>Curated Kenyan Escapes:</strong> From Mount Kenya treks to Lamu archipelago cruises, our itineraries are 100% tailored—no cookie-cutter tours here.</li>
+                    <li><strong>Sustainable Soul:</strong> We give back 10% of profits to fund community wildlife projects and women's artisan cooperatives.</li>
+                    <li><strong>Personal Touch:</strong> Your dedicated travel curator (that's us!) handles everything, from visa tips to surprise cultural immersions.</li>
+                </ul>
+                <blockquote style="color:#ff00ea; border-left: 4px solid #00fff7; padding-left: 12px; font-style:italic;">"Solivage didn't just take us to Kenya—they brought Kenya to life in our hearts." <br>– Sarah M., Repeat Traveler</blockquote>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <h2 class="section-title">Contact & Bookings</h2>
+            <form id="contactForm" aria-label="Contact Form" autocomplete="on" style="max-width: 500px; margin: 0 auto; background: rgba(0,0,0,0.85); padding: 30px; border-radius: 12px;">
+                <div style="margin-bottom: 18px;">
+                    <label for="name" style="display: block; color: #fff; margin-bottom: 6px;">Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true" aria-label="Name" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="email" style="display: block; color: #fff; margin-bottom: 6px;">Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true" aria-label="Email" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="message" style="display: block; color: #fff; margin-bottom: 6px;">Message</label>
+                    <textarea id="message" name="message" rows="4" required aria-required="true" aria-label="Message" style="width: 100%; padding: 10px; border-radius: 6px; border: none; background:#18182a; color:#fff;"></textarea>
+                </div>
+                    <div style="margin: 18px 0; text-align:center;">
+                        <!-- Google reCAPTCHA v2 widget placeholder -->
+                        <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+                    </div>
+                <button type="submit" class="cta-button" style="width: 100%; font-size: 1.1em;">Send Message</button>
+            </form>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        </section>
+    </main>
+
+        <!-- Rate and Charges Calculator Section -->
+        <section id="rate-calculator" class="section rate-calculator-section">
+            <h2 class="section-title">Rate & Charges Calculator</h2>
+            <form id="chargesCalculatorForm" style="max-width: 600px; margin: 0 auto; background: rgba(0,0,0,0.7); padding: 30px; border-radius: 16px;">
+                <div style="margin-bottom: 18px;">
+                    <label for="calcVehicle" style="color:#fff; margin-bottom:6px; display:block;">Vehicle</label>
+                    <select id="calcVehicle" name="calcVehicle" required style="width:100%; padding:10px; border-radius:6px; border:none;">
+                        <option value="">Select Vehicle</option>
+                        <option value="electric">Electric Car (BYD, Tesla, etc.)</option>
+                        <option value="vclass">Mercedes V Class</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="calcService" style="color:#fff; margin-bottom:6px; display:block;">Service Type</label>
+                    <select id="calcService" name="calcService" required style="width:100%; padding:10px; border-radius:6px; border:none;">
+                        <option value="">Select Service</option>
+                        <option value="hourly">Hourly Hire</option>
+                        <option value="oneway">One Way (Airport/Hotel/Point)</option>
+                        <option value="premium">Premium (2+ Days)</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="calcPickup" style="color:#fff; margin-bottom:6px; display:block;">Pickup Point</label>
+                    <select id="calcPickup" name="calcPickup" required style="width:100%; padding:10px; border-radius:6px; border:none;">
+                        <option value="">Select Pickup</option>
+                        <option value="jomo">Jomo Kenyatta Airport</option>
+                        <option value="wilson">Wilson Airport</option>
+                        <option value="serena">Serena Hotel</option>
+                        <option value="villa">Villa Rosa Kempinski</option>
+                        <option value="sarova">Sarova Stanley</option>
+                        <option value="other">Other (Nairobi)</option>
+                    </select>
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="calcDropoff" style="color:#fff; margin-bottom:6px; display:block;">Dropoff Point</label>
+                    <input type="text" id="calcDropoff" name="calcDropoff" required placeholder="Enter dropoff location" style="width:100%; padding:10px; border-radius:6px; border:none;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="calcHours" style="color:#fff; margin-bottom:6px; display:block;">Hours/Days</label>
+                    <input type="number" id="calcHours" name="calcHours" min="1" max="72" required placeholder="Enter number of hours or days" style="width:100%; padding:10px; border-radius:6px; border:none;">
+                </div>
+                <div style="margin-bottom: 18px;">
+                    <label for="calcTime" style="color:#fff; margin-bottom:6px; display:block;">Time of Day</label>
+                    <select id="calcTime" name="calcTime" required style="width:100%; padding:10px; border-radius:6px; border:none;">
+                        <option value="">Select Time</option>
+                        <option value="day">Day (6am-6pm)</option>
+                        <option value="night">Night (6pm-6am)</option>
+                    </select>
+                </div>
+                <button type="submit" class="cta-button" style="width:100%; font-size:1.1em;">Calculate Rate</button>
+            </form>
+            <div id="calcResult" style="display:none; text-align:center; margin-top:30px;">
+                <h3 style="color:#DEB887;">Estimated Price</h3>
+                <div id="calcPrice" style="font-size:2em; color:#fff; margin:20px 0;"></div>
+                <p style="color:#e0e0e0;">* Final price may vary based on traffic, route, and special requests.</p>
+            </div>
+        </section>
+
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> +254711736594</p>
+                <p><i class="fas fa-envelope"></i> velocerides@yahoo.com</p>
+                <p><i class="fas fa-location-dot"></i> Gigiri, Nairobi, Kenya</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+        <script src="solivage.js"></script>
+            <script>
+            // Vanta.js cyberpunk animated background
+            if (window.VANTA) {
+                VANTA.NET({
+                    el: "#cyberpunk-bg",
+                    mouseControls: true,
+                    touchControls: true,
+                    minHeight: 200.00,
+                    minWidth: 200.00,
+                    scale: 1.00,
+                    scaleMobile: 1.00,
+                    color: 0x00fff7,
+                    backgroundColor: 0x18182a,
+                    points: 18.00,
+                    maxDistance: 22.00,
+                    spacing: 18.00,
+                    showDots: true,
+                    // Neon cyberpunk effect
+                    color2: 0xff00ea,
+                    waveSpeed: 1.2,
+                    THREE: window.THREE
+                });
+            }
+            </script>
+</body>
+</html>
+    <!-- All legacy/duplicate content, chat widget, and old inline CSS removed. -->
+    <!-- Only the new Solivage content and required scripts/styles remain. -->

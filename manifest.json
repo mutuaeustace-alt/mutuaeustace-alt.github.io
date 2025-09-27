@@ -1,0 +1,16 @@
+{
+  "name": "Solivage Travellers",
+  "short_name": "Solivage",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#18182a",
+  "theme_color": "#00fff7",
+  "description": "Luxury Chauffeur & Travel Solutions in Kenya.",
+  "icons": [
+    {
+      "src": "back3-optimized.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}
